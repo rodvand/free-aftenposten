@@ -1,8 +1,8 @@
 function deleteCookies() {
     var domain = "http://www.aftenposten.no/";
     chrome.cookies.getAll({"url" : domain}, function(cookies) {
-     console.log("Number of cookies: "+cookies.length);
-     for(var i = 0; i < cookies.length; i++) {
+    console.log("Number of cookies: "+cookies.length);
+    for(var i = 0; i < cookies.length; i++) {
          var regexp = /^VPW*/;
          if(regexp.test(cookies[i].name)) {
             console.log("URL: "+ domain + " Name: " + cookies[i].name);
