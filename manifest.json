@@ -1,7 +1,7 @@
 {
-//    "background": {
-//        "scripts":["cookies.js"]
-//    },
+    "background": {
+        "scripts":["cookies.js"]
+    },
 
     "manifest_version": 2,
 
@@ -16,5 +16,13 @@
     "permissions" : [
         "cookies",
         "http://www.aftenposten.no/"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://www.aftenposten.no/*"],
+            "js": ["cs.js"],
+            "run_at": "document_idle"
+        }
     ]
 }
