@@ -9,10 +9,6 @@
     "description": "Circumvent the 8 pages limit on aftenposten.no",
     "version": "0.1",
 
-    "browser_action": {
-        "default_popup": "cookies.html"
-    },
-    
     "permissions" : [
         "cookies",
         "http://www.aftenposten.no/"
